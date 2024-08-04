@@ -16,12 +16,19 @@ h1 {
 	margin: 0;
 	padding: 20px;
 }
+h2, h3 {
+	text-align: center;
+	line-height: 100px;
+}
+ul, ol {
+	line-height: 35px;
+}
 #grid {
 	display: grid;
-	grid-template-columns: 1fr 170px;
+	grid-template-columns: 1fr 180px;
 }
 #contents {
-	margin: auto;
+	margin: 0 auto;
 	padding: 30px;
 }
 #menu {
@@ -29,6 +36,8 @@ h1 {
 	width: 110px;
 	margin: 0;
 	padding-top: 30px;
+	font-weight: bold;
+	list-style: none;
 }
 @media(max-width:800px) {
 	img {
@@ -43,7 +52,7 @@ h1 {
 	#menu {
 		border: 1px solid gray;
 		padding: 60px;
-		margin: auto;
+		margin: 0 auto;
 		margin-top: 30px;
 		margin-bottom: 30px;
 	}
