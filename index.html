@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta property="og:url" content="https://honggabin.github.io/rice-recipes/">
-    <meta property="og:title" content="밥레시피">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://honggabin.github.io/rice-recipes/%ED%95%98%EC%A0%95%EC%9A%B0%20%EA%B9%80.gif">
-    <meta property="og:description" content="밥은 정말 맛있어">
-    <link rel="stylesheet" href="style.css">
-    <title>밥레시피 - Welcome</title>
+
+  <!-- Open Graph Protocol -->
+  <meta charset="utf-8">
+  <meta property="og:url" content="https://honggabin.github.io/rice-recipes/">
+  <meta property="og:title" content="밥레시피">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://honggabin.github.io/rice-recipes/%ED%95%98%EC%A0%95%EC%9A%B0%20%EA%B9%80.gif">
+  <meta property="og:description" content="밥은 정말 맛있어">
+
+  <!-- 스타일 시트 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 탭 제목 -->
+  <title>밥레시피 - Welcome</title>
+
 </head>
 <body>
-    <h1><a href="index.html">밥레시피</a></h1>
-    <div id="grid">
-    <div id="contents" style="text-align: center;">
-         <p><img src="하정우 김.gif"></p>
-          밥은 정말 맛있어
+
+  <!-- 웹사이트 제목 -->
+  <h1><a href="index.html">밥레시피</a></h1>
+
+  <!-- 본문과 사이드바 -->
+  <div id="grid">
+
+    <!-- 본문 -->
+    <div id="content" style="text-align: center; padding: 50px;">
+      <p><img src="하정우_김.gif"></p>
+      밥은 정말 맛있어
     </div>
-    <ul id="menu">
-        <input type="button" value="다크 모드" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';"><br>
-        <input type="button" value="라이트 모드" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';"><br><br>
-        <li><a href="1.html">냄비밥</a></li>
-        <li><a href="2.html">간장계란밥</a></li>
-        <li><a href="3.html">고추장 치즈밥</a></li><br>
-	    <li>죽</li>
-	    <li>달걀죽</li>
-	    <li>참치죽</li>
+
+    <!-- 사이드바 -->
+    <ul id="sidebar">
+
+      <!-- 다크/라이트 모드 토글 -->
+      <div style="text-align: center;">
+        <input type="button" value="다크 모드" onclick="
+          if (document.querySelector('input').value === '다크 모드') {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('input').value = '라이트 모드';
+          } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('input').value = '다크 모드';
+          }
+        ">
+      </div><br>
+
+      <!-- 메뉴 -->
+      <li><a href="1.html">냄비밥</a></li>
+      <li><a href="2.html">간장계란밥</a></li>
+      <li><a href="3.html">고추장 치즈밥</a></li><br>
+      <li>죽</li>
+      <li>달걀죽</li>
+      <li>참치죽</li>
+
     </ul>
-    </div>
+
 </body>
 </html>

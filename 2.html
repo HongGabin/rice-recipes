@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta property="og:url" content="https://honggabin.github.io/rice-recipes/2.html">
-    <meta property="og:title" content="밥레시피 - 간장계란밥">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://honggabin.github.io/rice-recipes/%EA%B0%84%EC%9E%A5%EA%B3%84%EB%9E%80%EB%B0%A5.jpg">
-    <meta property="og:description" content="간장계란밥 레시피">
-    <link rel="stylesheet" href="style.css">
-    <title>밥레시피 - 간장계란밥</title>
+
+  <!-- Open Graph Protocol -->
+  <meta charset="utf-8">
+  <meta property="og:url" content="https://honggabin.github.io/rice-recipes/2.html">
+  <meta property="og:title" content="밥레시피 - 간장계란밥">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://honggabin.github.io/rice-recipes/%EA%B0%84%EC%9E%A5%EA%B3%84%EB%9E%80%EB%B0%A5.jpg">
+  <meta property="og:description" content="간장계란밥 레시피">
+
+  <!-- 스타일 시트 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 탭 제목 -->
+  <title>밥레시피 - 간장계란밥</title>
+
 </head>
 <body>
-    <h1><a href="index.html">밥레시피</a></h1>
-    <div id="grid">
-    <div id="contents">
-    <h2>간장계란밥</h2>
-    <img src="간장계란밥.jpg" width="560" height="315"><br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x3fKQy6ofj4?si=yoghG-zUvjRB8Ht6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h3>재료</h3>
-        <ul>
-            <li>수정 예정</li>
-            <li>수정 예정</li>
-        </ul>
-        <h3>레시피</h3>
-        <ol>
-            <li>수정 예정</li>
-            <li>수정 예정</li>
-            <li>수정 예정</li>
-            <li>수정 예정</li>
-        </ol>
+
+  <!-- 웹사이트 제목 -->
+  <h1><a href="index.html">밥레시피</a></h1>
+
+  <!-- 본문과 사이드바 -->
+  <div id="grid">
+
+    <!-- 본문 -->
+    <div id="content">
+      <h2>간장계란밥</h2>
+      <img src="간장계란밥.jpg" width="560" height="315"><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/x3fKQy6ofj4?si=yoghG-zUvjRB8Ht6"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>재료</h3>
+      <ul>
+        <li>수정 예정</li>
+        <li>수정 예정</li>
+      </ul>
+      <h3>레시피</h3>
+      <ol>
+        <li>수정 예정</li>
+        <li>수정 예정</li>
+        <li>수정 예정</li>
+        <li>수정 예정</li>
+      </ol>
     </div>
-    <ul id="menu">
-        <input type="button" value="다크 모드" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';"><br>
-        <input type="button" value="라이트 모드" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';"><br><br>
-        <li><a href="1.html">냄비밥</a></li>
-        <li><a href="2.html" style="color:hotpink;">간장계란밥</a></li>
-        <li><a href="3.html">고추장 치즈밥</a></li><br>
-	    <li>죽</li>
-	    <li>달걀죽</li>
-	    <li>참치죽</li>
+
+    <!-- 사이드바 -->
+    <ul id="sidebar">
+
+      <!-- 다크/라이트 모드 토글 -->
+      <div style="text-align: center;">
+        <input type="button" value="다크 모드" onclick="
+          if (document.querySelector('input').value === '다크 모드') {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('input').value = '라이트 모드';
+          } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('input').value = '다크 모드';
+          }
+        ">
+      </div><br>
+
+      <!-- 메뉴 -->
+      <li><a href="1.html">냄비밥</a></li>
+      <li><a href="2.html" style="color:hotpink;">간장계란밥</a></li>
+      <li><a href="3.html">고추장 치즈밥</a></li><br>
+      <li>죽</li>
+      <li>달걀죽</li>
+      <li>참치죽</li>
+      
     </ul>
-    </div>
+
+  </div>
+
 </body>
 </html>

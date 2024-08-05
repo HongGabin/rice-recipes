@@ -1,59 +1,91 @@
+/* 전체 여백 */
 body {
-	margin: 0;
+  margin: 0;
 }
+
+/* 링크 */
 a {
-	color: green;
-	text-decoration: none;
+  color: green;
+  text-decoration: none;
 }
-img, iframe {
-	width: 100%;
-	border: 1px solid black;
+
+/* 이미지, 유튜브 */
+img,
+iframe {
+  width: 100%;
+  border: 1px solid black;
 }
+
+/* 타이틀 */
 h1 {
-	font-size: 40px;
-	text-align: center;
-	border-bottom: 1px solid gray;
-	margin: 0;
-	padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
 }
-h2, h3 {
-	text-align: center;
-	line-height: 100px;
+
+/* 글제목, 목차 */
+h2,
+h3 {
+  text-align: center;
+  line-height: 100px;
+  padding-top: 50px;
 }
-ul, ol {
-	line-height: 35px;
+
+/* 글머리 기호 목록, 번호 매기기 목록 */
+ul,
+ol {
+  line-height: 35px;
 }
+
+/* 본문과 사이드바 간격 */
 #grid {
-	display: grid;
-	grid-template-columns: 1fr 180px;
+  display: grid;
+  grid-template-columns: 1fr 190px;
 }
-#contents {
-	margin: 0 auto;
-	padding: 30px;
+
+/* 본문 */
+#content {
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
-#menu {
-	border-left: 1px solid gray;
-	width: 110px;
-	margin: 0;
-	padding-top: 30px;
-	font-weight: bold;
-	list-style: none;
+
+/* 사이드바 */
+#sidebar {
+  border-left: 1px solid gray;
+  width: 110px;
+  margin: 0;
+  padding-top: 30px;
+  font-weight: bold;
+  list-style: none;
 }
-@media(max-width:800px) {
-	img {
-		height: max-content;
-	}
-	iframe {
-		max-height: max-content;
-	}
-	#grid {
-		display: block;
-	}
-	#menu {
-		border: 1px solid gray;
-		padding: 60px;
-		margin: 0 auto;
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
+
+/* 모바일, 태블릿 */
+@media (max-width:800px) {
+
+  /* 이미지 */
+  img {
+    height: max-content;
+  }
+
+  /* 유튜브 */
+  iframe {
+    max-height: max-content;
+  }
+
+  /* 본문과 사이드바 */
+  #grid {
+    display: block;
+  }
+
+  /* 사이드바 */
+  #sidebar {
+    border: 1px solid gray;
+    padding: 60px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
 }
