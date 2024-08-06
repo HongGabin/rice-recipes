@@ -37,14 +37,25 @@
       <!-- 다크/라이트 모드 토글 -->
       <div style="text-align: center;">
         <input type="button" value="다크 모드" onclick="
-          if (document.querySelector('input').value === '다크 모드') {
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            document.querySelector('input').value = '라이트 모드';
+          let target = document.querySelector('body')
+            , aList = document.querySelectorAll('a')
+	          , i = 0;
+          if (this.value === '다크 모드') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = '라이트 모드';
+            while (i < aList.length) {
+              aList[i].style.color = 'yellow';
+              i = i + 1;
+            }
           } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            document.querySelector('input').value = '다크 모드';
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = '다크 모드';
+            while (i < aList.length) {
+              aList[i].style.color = 'green';
+              i = i + 1;
+            }
           }
         ">
       </div><br>
