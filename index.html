@@ -16,6 +16,34 @@
   <!-- 탭 제목 -->
   <title>밥레시피 - Welcome</title>
 
+  <script>
+
+    // 다크 모드 토글
+    function darkLightHandler(self) {
+      let target = document.querySelector('body')
+        , aList = document.querySelectorAll('a')
+        , i = 0;
+      if (self.value === '다크 모드') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = '라이트 모드';
+        while (i < aList.length) {
+          aList[i].style.color = 'yellow';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = '다크 모드';
+        while (i < aList.length) {
+          aList[i].style.color = 'green';
+          i = i + 1;
+        }
+      }
+    }
+
+  </script>
+
 </head>
 <body>
 
@@ -34,29 +62,10 @@
     <!-- 사이드바 -->
     <ul id="sidebar">
 
-      <!-- 다크/라이트 모드 토글 -->
+      <!-- 다크 모드 토글 -->
       <div style="text-align: center;">
         <input type="button" value="다크 모드" onclick="
-          let target = document.querySelector('body')
-            , aList = document.querySelectorAll('a')
-	          , i = 0;
-          if (this.value === '다크 모드') {
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = '라이트 모드';
-            while (i < aList.length) {
-              aList[i].style.color = 'yellow';
-              i = i + 1;
-            }
-          } else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value = '다크 모드';
-            while (i < aList.length) {
-              aList[i].style.color = 'green';
-              i = i + 1;
-            }
-          }
+          darkLightHandler(this);
         ">
       </div><br>
 
