@@ -19,26 +19,36 @@
   <script>
 
     // 다크 모드 토글
+    let Links = {
+      setColorLinks:function (color) {
+        let aList = document.querySelectorAll('a')
+          , i = 0;
+        while (i < aList.length) {
+          aList[i].style.color = color;
+          i = i + 1;
+        }
+      }
+    }
+    let Body = {
+      setColorBackground:function (color) {
+	      document.querySelector('body').style.backgroundColor = color;
+      },
+      setColorFont:function (color) {
+	      document.querySelector('body').style.color = color;
+      }
+    }
     function darkLightHandler(self) {
-      let target = document.querySelector('body')
-        , aList = document.querySelectorAll('a')
-        , i = 0;
+      let target = document.querySelector('body');
       if (self.value === '다크 모드') {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
+        Body.setColorBackground('black');
+        Body.setColorFont('white');
         self.value = '라이트 모드';
-        while (i < aList.length) {
-          aList[i].style.color = 'yellow';
-          i = i + 1;
-        }
+        Links.setColorLinks('yellow');
       } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
+        Body.setColorBackground('white');
+        Body.setColorFont('black');
         self.value = '다크 모드';
-        while (i < aList.length) {
-          aList[i].style.color = 'green';
-          i = i + 1;
-        }
+        Links.setColorLinks('green');
       }
     }
 
@@ -50,7 +60,7 @@
   <!-- 웹사이트 제목 -->
   <h1><a href="index.html">밥레시피</a></h1>
 
-  <!-- 본문과 사이드바 -->
+  <!-- 본문과 사이드바 그리드 -->
   <div id="grid">
 
     <!-- 본문 -->
@@ -80,9 +90,7 @@
 
       <!-- 다크 모드 토글 -->
       <div style="text-align: center;">
-        <input type="button" value="다크 모드" onclick="
-          darkLightHandler(this);
-        ">
+        <input type="button" value="다크 모드" onclick="darkLightHandler(this);">
       </div><br>
       
       <!-- 메뉴 -->
