@@ -16,43 +16,8 @@
   <!-- 탭 제목 -->
   <title>밥레시피 - 간장계란밥</title>
 
-  <script>
-
-    // 다크 모드 토글
-    let Links = {
-      setColorLinks:function (color) {
-        let aList = document.querySelectorAll('a')
-          , i = 0;
-        while (i < aList.length) {
-          aList[i].style.color = color;
-          i = i + 1;
-        }
-      }
-    }
-    let Body = {
-      setColorBackground:function (color) {
-	      document.querySelector('body').style.backgroundColor = color;
-      },
-      setColorFont:function (color) {
-	      document.querySelector('body').style.color = color;
-      }
-    }
-    function darkLightHandler(self) {
-      let target = document.querySelector('body');
-      if (self.value === '다크 모드') {
-        Body.setColorBackground('black');
-        Body.setColorFont('white');
-        self.value = '라이트 모드';
-        Links.setColorLinks('yellow');
-      } else {
-        Body.setColorBackground('white');
-        Body.setColorFont('black');
-        self.value = '다크 모드';
-        Links.setColorLinks('green');
-      }
-    }
-
-  </script>
+  <!-- 다크 모드 토글 자바스크립트 -->
+  <script src="Dark_Light_Handler.js"></script>
 
 </head>
 <body>
